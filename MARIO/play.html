@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/play.css">
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<title></title>
+</head>
+
+<body onload="init(document.images['x']);rattleimage()">
+<div id="wrapper">
+
+
+<img id="world" src="world1.jpeg"/>
+
+<div id="clouds">
+  <div class="cloud x1"></div>
+  <div class="cloud x2"></div>
+  <div class="cloud x3"></div>
+  <div class="cloud x4"></div>
+  <div class="cloud x5"></div>
+</div>
+
+
+
+
+  <div id="animate">
+	 <img src="mario.gif">
+  </div>
+
+  <div id="title">
+  <img src="mariolet.png"/>
+  </div>
+
+  <div id="fly">
+   <img src="flykoopa.gif">
+    <script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#fly").animate({
+        left: width
+      }, 9000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#fly").animate({
+        left: 0
+      }, 9000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+  </div>
+
+   <div id="koopa">
+   <img src="koopa.gif">
+  </div>
+
+  <div id="bowser">
+   <img src="bowser.gif">
+  </div>
+
+    <div id="bowserjr">
+   <img src="bowserjr.gif">
+  </div>
+
+      <div id="play">
+      <a href="index.html">
+   <img src="play3.png">
+   </a>
+  </div>
+
+<div id="music">  
+<audio controls autoplay>
+  <source src="mp3/snow.mp3" type="audio/mpeg">
+</audio> 
+</div>
+
+
+<div id="cuerpo">
+  
+<div id="casa">
+  <a href="index.html"> <p>HOME</p> </a>
+</div>
+
+<div id="classic">
+  <a href="classic.html"> <p>CLASSIC</p> </a>
+</div>
+
+<div id="history">
+  <a href="history.html"> <p>HISTORY</p> </a>
+</div>
+
+<div id="source">
+  <a href="index.html"> <p>SOURCE</p> </a>
+</div>
+
+<div id="playnow">
+  <a href="play.html"> <p>PLAY NOW</p> </a>
+</div>
+
+</div>
+
+
+<div id="now">
+<div align="center"><object width="940" height="680"><param name="movie" value="http://www.embeddablegames.net/embedgames/superflashmariobros.swf"><param name="quality" value="high"><embed src="http://www.embeddablegames.net/embedgames/superflashmariobros.swf" quality="high" width="640" height="400" type="application/x-shockwave-flash" pluginspage= "http://www.macromedia.com/go/getflashplayer"></embed></object><br/></div>
+
+
+</div>
+
+
+
+
+
+	<script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#animate").animate({
+        left: width
+      }, 15000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#animate").animate({
+        left: 0
+      }, 15000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+
+
+
+</body>
+</html>

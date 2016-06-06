@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<title></title>
+</head>
+
+<body onload="init(document.images['x']);rattleimage()">
+
+<div id="wrapper">
+
+<img id="world" src="world1.jpeg"/>
+
+<div id="clouds">
+  <div class="cloud x1"></div>
+  <div class="cloud x2"></div>
+  <div class="cloud x3"></div>
+  <div class="cloud x4"></div>
+  <div class="cloud x5"></div>
+</div>
+
+
+
+  <div id="animate">
+	 <img src="mario.gif">
+  </div>
+
+  <div id="title">
+  <img src="mariolet.png"/>
+  </div>
+
+  <div id="fly">
+   <img src="flykoopa.gif">
+    <script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#fly").animate({
+        left: width
+      }, 9000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#fly").animate({
+        left: 0
+      }, 9000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+  </div>
+
+   <div id="koopa">
+   <img src="koopa.gif">
+  </div>
+
+  <div id="bowser">
+   <img src="bowser.gif">
+  </div>
+
+    <div id="bowserjr">
+   <img src="bowserjr.gif">
+  </div>
+
+      <div id="play">
+      <a href="home.html">
+   <img src="play3.png">
+   </a>
+  </div>
+
+<div id="music">  
+<audio controls autoplay>
+  <source src="mp3/marioground.mp3" type="audio/mpeg">
+</audio> 
+</div>
+
+
+</div>
+
+
+
+
+
+	<script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#animate").animate({
+        left: width
+      }, 15000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#animate").animate({
+        left: 0
+      }, 15000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/classic.css">
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<title></title>
+</head>
+
+<body onload="init(document.images['x']);rattleimage()">
+<div id="wrapper">
+
+
+<img id="world" src="world1.jpeg"/>
+
+<div id="clouds">
+  <div class="cloud x1"></div>
+  <div class="cloud x2"></div>
+  <div class="cloud x3"></div>
+  <div class="cloud x4"></div>
+  <div class="cloud x5"></div>
+</div>
+
+
+
+
+  <div id="animate">
+	 <img src="mario.gif">
+  </div>
+
+  <div id="title">
+  <img src="mariolet.png"/>
+  </div>
+
+  <div id="fly">
+   <img src="flykoopa.gif">
+    <script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#fly").animate({
+        left: width
+      }, 9000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#fly").animate({
+        left: 0
+      }, 9000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+  </div>
+
+   <div id="koopa">
+   <img src="koopa.gif">
+  </div>
+
+  <div id="bowser">
+   <img src="bowser.gif">
+  </div>
+
+    <div id="bowserjr">
+   <img src="bowserjr.gif">
+  </div>
+
+      <div id="play">
+      <a href="index.html">
+   <img src="play3.png">
+   </a>
+  </div>
+
+<div id="music">  
+<p id="mu1">Name: Desert  World</p>
+<audio controls autoplay>
+  <source src="mp3/desert.mp3" type="audio/mpeg">
+</audio>
+
+<p id="em1">Copy and paste in your body to embed</p>
+
+<textarea cols="41.8" rows="7"> <div id="music">  
+<p id="mu1">Name: Desert  World</p>
+<audio controls autoplay>
+  <source src="mp3/desert.mp3" type="audio/mpeg">
+</audio></div> 
+</textarea>
+
+</div>
+
+<div id="snow">  
+<p id="mu2">Name: Snow  World</p>
+<audio controls >
+  <source src="mp3/snow.mp3" type="audio/mpeg">
+</audio> 
+
+<p id="em2">Copy and paste in your body to embed</p>
+
+<textarea cols="41.8" rows="7">
+<div id="snow">  
+<p id="mu2">Name: Snow  World</p>
+<audio controls autoplay>
+  <source src="mp3/snow.mp3" type="audio/mpeg">
+</audio> </div> </textarea>
+
+</div>
+
+<div id="forest">  
+<p id="mu3">Name: Forest  World</p>
+<audio controls >
+  <source src="mp3/forest.mp3" type="audio/mpeg">
+</audio> 
+
+<p id="em3">Copy and paste in your body to embed</p>
+
+<textarea cols="41.8" rows="7">
+<div id="forest">  
+<p id="mu3">Name: Forest  World</p>
+<audio controls autoplay>
+  <source src="mp3/forest.mp3" type="audio/mpeg">
+</audio> </div> </textarea>
+
+</div>
+
+
+
+
+<div id="cuerpo">
+  
+  <div id="menu" >
+    <div id="men" >
+      <div class="mob">
+  <button class="dropbtn">= MENU</button>
+  <div class="mob-content">
+      <a href="home.html">Home</a>
+  <a href="classic.html">Classic</a>
+    <a href="history.html">History</a>
+    <a href="nina.html">Play</a>
+  </div>
+</div>
+    </div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+	<script>
+$(document).ready(function(e) {
+    var width = $(document).width();
+
+    function goRight() {
+        $("#animate").animate({
+        left: width
+      }, 15000, function() {
+         setTimeout(goLeft, 50);
+      });
+    }
+    function goLeft() {
+        $("#animate").animate({
+        left: 0
+      }, 15000, function() {
+         setTimeout(goRight, 50);
+      });
+    }
+
+    setTimeout(goRight, 50);
+});
+</script>
+
+
+
+</body>
+</html>
